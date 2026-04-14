@@ -1,0 +1,1679 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="50 projets DIY pour votre maison : tutoriels étape par étape, budgets sous 100€, matériel Leroy Merlin & Castorama. Bricolage facile pour tous !">
+  <meta name="author" content="Brico Malin France">
+  <meta name="theme-color" content="#FF6B35">
+  <title>Brico Malin France | 50 Projets DIY & Bricolage</title>
+  <style>
+    :root {
+      --primary: #FF6B35;
+      --secondary: #2E2E2E;
+      --accent: #FFD23F;
+      --light: #F7F7F7;
+      --white: #FFFFFF;
+      --success: #4CAF50;
+      --warning: #FF9800;
+      --danger: #F44336;
+      --shadow: 0 4px 6px rgba(0,0,0,0.1);
+      --radius: 8px;
+    }
+    
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      line-height: 1.6;
+      color: var(--secondary);
+      background: var(--light);
+      font-size: 16px;
+    }
+    
+    .container { width: 92%; max-width: 1200px; margin: 0 auto; padding: 0 1rem; }
+    
+    /* Header */
+    .site-header {
+      background: linear-gradient(135deg, var(--primary), #E55A2B);
+      color: var(--white);
+      padding: 2.5rem 1rem 2rem;
+      text-align: center;
+    }
+    .site-header h1 {
+      font-size: clamp(2rem, 5vw, 3rem);
+      margin-bottom: 0.5rem;
+      text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+    }
+    .tagline {
+      font-size: clamp(1rem, 2.5vw, 1.25rem);
+      max-width: 700px;
+      margin: 0 auto;
+      opacity: 0.95;
+    }
+    .address {
+      margin-top: 1rem;
+      font-size: 0.95rem;
+      opacity: 0.9;
+    }
+    
+    /* Navigation */
+    .sticky-nav {
+      position: sticky;
+      top: 0;
+      background: var(--white);
+      box-shadow: var(--shadow);
+      z-index: 100;
+      padding: 0.8rem 0;
+    }
+    .nav-list {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 0.6rem;
+      list-style: none;
+    }
+    .nav-list a {
+      display: inline-block;
+      padding: 0.5rem 1rem;
+      border-radius: 25px;
+      font-weight: 600;
+      font-size: 0.9rem;
+      color: var(--secondary);
+      background: var(--light);
+      transition: all 0.3s;
+      border: 2px solid transparent;
+    }
+    .nav-list a:hover, .nav-list a:focus {
+      background: var(--primary);
+      color: var(--white);
+      transform: translateY(-2px);
+      text-decoration: none;
+    }
+    
+    /* Sections */
+    .category-section {
+      padding: 3rem 0;
+      border-bottom: 1px solid #ddd;
+    }
+    .category-section:nth-child(even) { background: var(--white); }
+    .category-section h2 {
+      font-size: clamp(1.5rem, 4vw, 2rem);
+      color: var(--primary);
+      margin-bottom: 2rem;
+      text-align: center;
+      padding-bottom: 0.5rem;
+      border-bottom: 3px solid var(--accent);
+      display: inline-block;
+    }
+    .section-header { text-align: center; }
+    
+    /* Grid */
+    .project-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 1.5rem;
+    }
+    
+    /* Cards */
+    .project-card {
+      background: var(--white);
+      border-radius: var(--radius);
+      padding: 1.5rem;
+      box-shadow: var(--shadow);
+      border-left: 5px solid var(--primary);
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+    .project-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 16px rgba(0,0,0,0.15);
+    }
+    
+    .project-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: start;
+      margin-bottom: 1rem;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+    }
+    .project-card h3 {
+      color: var(--secondary);
+      font-size: 1.2rem;
+      flex: 1;
+    }
+    .difficulty {
+      display: inline-block;
+      padding: 0.25rem 0.75rem;
+      border-radius: 15px;
+      font-size: 0.85rem;
+      font-weight: 700;
+      text-transform: uppercase;
+    }
+    .diff-facile { background: var(--success); color: white; }
+    .diff-moyen { background: var(--warning); color: white; }
+    .diff-avance { background: var(--danger); color: white; }
+    
+    .meta-info {
+      display: flex;
+      gap: 1rem;
+      margin-bottom: 1rem;
+      font-size: 0.9rem;
+      color: #666;
+      flex-wrap: wrap;
+    }
+    .meta-item {
+      display: flex;
+      align-items: center;
+      gap: 0.3rem;
+    }
+    .budget {
+      color: var(--primary);
+      font-weight: 700;
+      font-size: 1.1rem;
+    }
+    
+    .materials {
+      background: var(--light);
+      padding: 1rem;
+      border-radius: 6px;
+      margin: 1rem 0;
+    }
+    .materials h4 {
+      color: var(--primary);
+      margin-bottom: 0.5rem;
+      font-size: 0.95rem;
+    }
+    .materials ul {
+      list-style: none;
+      font-size: 0.9rem;
+    }
+    .materials li {
+      padding: 0.25rem 0;
+      padding-left: 1.2rem;
+      position: relative;
+    }
+    .materials li:before {
+      content: "✓";
+      position: absolute;
+      left: 0;
+      color: var(--primary);
+      font-weight: bold;
+    }
+    .store-tag {
+      font-size: 0.8rem;
+      color: #888;
+      font-style: italic;
+    }
+    
+    .steps {
+      margin: 1rem 0;
+    }
+    .steps h4 {
+      color: var(--secondary);
+      margin-bottom: 0.5rem;
+      font-size: 0.95rem;
+    }
+    .steps ol {
+      padding-left: 1.3rem;
+      font-size: 0.9rem;
+    }
+    .steps li {
+      margin-bottom: 0.4rem;
+      line-height: 1.5;
+    }
+    
+    .safety {
+      background: #FFF3CD;
+      border-left: 4px solid var(--warning);
+      padding: 0.75rem;
+      border-radius: 4px;
+      margin-top: 1rem;
+      font-size: 0.85rem;
+    }
+    .safety strong {
+      color: var(--warning);
+      display: block;
+      margin-bottom: 0.25rem;
+    }
+    
+    /* Tool Guide Section */
+    .tool-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 1.2rem;
+    }
+    .tool-card {
+      background: var(--white);
+      padding: 1.2rem;
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      border-top: 4px solid var(--accent);
+    }
+    .tool-card h4 {
+      color: var(--primary);
+      margin-bottom: 0.5rem;
+    }
+    .tool-card p {
+      font-size: 0.9rem;
+      margin-bottom: 0.5rem;
+    }
+    .price-range {
+      color: var(--success);
+      font-weight: 700;
+      font-size: 0.9rem;
+    }
+    
+    /* Footer */
+    .site-footer {
+      background: var(--secondary);
+      color: var(--white);
+      text-align: center;
+      padding: 2rem 1rem;
+    }
+    .disclaimer {
+      max-width: 800px;
+      margin: 0 auto 1rem;
+      font-size: 0.9rem;
+      line-height: 1.6;
+    }
+    .copyright {
+      font-size: 0.85rem;
+      opacity: 0.8;
+    }
+    
+    /* Responsive */
+    @media (max-width: 768px) {
+      .project-grid { grid-template-columns: 1fr; }
+      .nav-list a { padding: 0.4rem 0.8rem; font-size: 0.85rem; }
+      .meta-info { font-size: 0.85rem; }
+    }
+    
+    @media (prefers-reduced-motion: reduce) {
+      * { transition: none !important; }
+      html { scroll-behavior: auto; }
+    }
+  </style>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="container">
+    <h1>🔨 Brico Malin France</h1>
+    <p class="tagline">Astuces bricolage, réparations express & projets DIY économiques. Pour rendre votre maison unique, sans se ruiner ! ✨</p>
+    <p class="address">📍 23 Rue de la République, 13001 Marseille, France</p>
+  </div>
+</header>
+
+<nav class="sticky-nav" aria-label="Navigation principale">
+  <div class="container">
+    <ul class="nav-list">
+      <li><a href="#peinture">Peinture</a></li>
+      <li><a href="#rangement">Rangement</a></li>
+      <li><a href="#eclairage">Éclairage</a></li>
+      <li><a href="#cuisine">Cuisine</a></li>
+      <li><a href="#sdb">Salle de Bain</a></li>
+      <li><a href="#jardin">Jardin</a></li>
+      <li><a href="#outils">Outillage</a></li>
+    </ul>
+  </div>
+</nav>
+
+<main class="container">
+
+  <!-- PEINTURE & DÉCORATION -->
+  <section id="peinture" class="category-section">
+    <div class="section-header">
+      <h2>🎨 Peinture & Décoration</h2>
+    </div>
+    <div class="project-grid">
+      
+      <article class="project-card">
+        <div class="project-header">
+          <h3>1. Peindre un mur d'accent</h3>
+          <span class="difficulty diff-facile">Facile</span>
+        </div>
+        <div class="meta-info">
+          <span class="meta-item">⏱️ 4-6h</span>
+          <span class="budget">💰 40-60€</span>
+        </div>
+        <div class="materials">
+          <h4>Matériel (Leroy Merlin/Castorama):</h4>
+          <ul>
+            <li>Peinture acrylique 2,5L (15-25€)</li>
+            <li>Rouleau 180mm + manchon (8€)</li>
+            <li>Bac à peinture (3€)</li>
+            <li>Scotch de masquage (4€)</li>
+            <li>Bâche de protection (5€)</li>
+          </ul>
+        </div>
+        <div class="steps">
+          <h4>Étapes:</h4>
+          <ol>
+            <li>Protégez sol et plinthes avec bâche et scotch</li>
+            <li>Préparez le mur (nettoyage, rebouchage trous)</li>
+            <li>Appliquez une sous-couche si nécessaire</li>
+            <li>Peignez en croisant les passes (verticales puis horizontales)</li>
+            <li>Laissez sécher 4h entre les couches (2 couches minimum)</li>
+            <li>Retirez le scotch avant séchage complet</li>
+          </ol>
+        </div>
+        <div class="safety">
+          <strong>⚠️ Sécurité:</strong> Aérez bien la pièce. Portez des gants et lunettes si nécessaire.
+        </div>
+      </article>
+
+      <article class="project-card">
+        <div class="project-header">
+          <h3>2. Tête de lit en palettes</h3>
+          <span class="difficulty diff-facile">Facile</span>
+        </div>
+        <div class="meta-info">
+          <span class="meta-item">⏱️ 3h</span>
+          <span class="budget">💰 30-50€</span>
+        </div>
+        <div class="materials">
+          <h4>Matériel:</h4>
+          <ul>
+            <li>2 palettes Europe (gratuites ou 10€)</li>
+            <li>Papier de verre grain 120 (5€)</li>
+            <li>Peinture/vernis (15€)</li>
+            <li>Vis à bois + équerres (10€)</li>
+            <li>Guirlande LED (10€)</li>
+          </ul>
+        </div>
+        <div class="steps">
+          <h4>Étapes:</h4>
+          <ol>
+            <li>Poncez les palettes pour enlever échardes</li>
+            <li>Peignez ou vernissez, laissez sécher 24h</li>
+            <li>Fixez les 2 palettes côte à côte au mur (hauteur lit)</li>
+            <li>Vissez des équerres au dos pour solidité</li>
+            <li>Ajoutez guirlandes pour ambiance</li>
+          </ol>
+        </div>
+        <div class="safety">
+          <strong>⚠️ Sécurité:</strong> Vérifiez que les palettes sont traitées HT (non chimiques). Utilisez chevilles adaptées à votre mur.
+        </div>
+      </article>
+
+      <article class="project-card">
+        <div class="project-header">
+          <h3>3. Cadre photo géant washi tape</h3>
+          <span class="difficulty diff-facile">Facile</span>
+        </div>
+        <div class="meta-info">
+          <span class="meta-item">⏱️ 1h</span>
+          <span class="budget">💰 15€</span>
+        </div>
+        <div class="materials">
+          <h4>Matériel:</h4>
+          <ul>
+            <li>Washi tape décoratif x3 (5€/rouleau)</li>
+            <li>Règle métallique (déjà possédée)</li>
+            <li>Cutter (déjà possédé)</li>
+          </ul>
+        </div>
+        <div class="steps">
+          <h4>Étapes:</h4>
+          <ol>
+            <li>Nettoyez le mur avec chiffon sec</li>
+            <li>Tracez légèrement au crayon les dimensions souhaitées</li>
+            <li>Appliquez le washi tape en suivant les lignes</li>
+            <li>Superposez motifs pour effet cadre</li>
+            <li>Accrochez photos avec punaises ou scotch double-face</li>
+          </ol>
+        </div>
+        <div class="safety">
+          <strong>⚠️ Sécurité:</strong> Testez le washi tape sur un coin discret pour vérifier qu'il ne décolle pas la peinture.
+        </div>
+      </article>
+
+      <article class="project-card">
+        <div class="project-header">
+          <h3>4. Effet béton ciré sur meuble</h3>
+          <span class="difficulty diff-moyen">Moyen</span>
+        </div>
+        <div class="meta-info">
+          <span class="meta-item">⏱️ 6h + séchage</span>
+          <span class="budget">💰 60-80€</span>
+        </div>
+        <div class="materials">
+          <h4>Matériel (Leroy Merlin):</h4>
+          <ul>
+            <li>Enduit décoratif effet béton (30€)</li>
+            <li>Spatule crantée (8€)</li>
+            <li>Vernis protecteur mat (15€)</li>
+            <li>Papier de verre 240 (5€)</li>
+          </ul>
+        </div>
+        <div class="steps">
+          <h4>Étapes:</h4>
+          <ol>
+            <li>Poncez le meuble, dépoussiérez</li>
+            <li>Appliquez sous-couche d'accrochage</li>
+            <li>Étalez l'enduit à la spatule en mouvements irréguliers</li>
+            <li>Laissez sécher 4h, poncez légèrement</li>
+            <li>Appliquez 2 couches de vernis protecteur</li>
+          </ol>
+        </div>
+        <div class="safety">
+          <strong>⚠️ Sécurité:</strong> Travaillez dans pièce ventilée. Portez masque anti-poussière et gants.
+        </div>
+      </article>
+
+      <article class="project-card">
+        <div class="project-header">
+          <h3>5. Stencils géométriques au mur</h3>
+          <span class="difficulty diff-facile">Facile</span>
+        </div>
+        <div class="meta-info">
+          <span class="meta-item">⏱️ 3-4h</span>
+          <span class="budget">💰 35€</span>
+        </div>
+        <div class="materials">
+          <h4>Matériel:</h4>
+          <ul>
+            <li>Stencil géométrique A4 (10€)</li>
+            <li>Peinture acrylique contrastée (15€)</li>
+            <li>Rouleau mousse petit (5€)</li>
+            <li>Scotch repositionnable (5€)</li>
+          </ul>
+        </div>
+        <div class="steps">
+          <h4>Étapes:</h4>
+          <ol>
+            <li>Tracez repères au crayon pour alignement</li>
+            <li>Fixez stencil au mur avec scotch</li>
+            <li>Tamponnez peinture (peu de produit !)</li>
+            <li>Soulevez délicatement, déplacez stencil</li>
+            <li>Nettoyez stencil entre chaque utilisation</li>
+          </ol>
+        </div>
+        <div class="safety">
+          <strong>⚠️ Sécurité:</strong> Utilisez peu de peinture pour éviter coulures sous le stencil.
+        </div>
+      </article>
+
+      <article class="project-card">
+        <div class="project-header">
+          <h3>6. Repeindre meubles de cuisine</h3>
+          <span class="difficulty diff-moyen">Moyen</span>
+        </div>
+        <div class="meta-info">
+          <span class="meta-item">⏱️ 2 jours</span>
+          <span class="budget">💰 80-100€</span>
+        </div>
+        <div class="materials">
+          <h4>Matériel (Castorama):</h4>
+          <ul>
+            <li>Peinture spéciale cuisine 2,5L (35€)</li>
+            <li>Dégraissant (8€)</li>
+            <li>Papier de verre 180 (6€)</li>
+            <li>Rouleau laqueur 100mm (12€)</li>
+            <li>Pinceaux angles (10€)</li>
+          </ul>
+        </div>
+        <div class="steps">
+          <h4>Étapes:</h4>
+          <ol>
+            <li>Démontez portes et tiroirs, numérotez-les</li>
+            <li>Dégraissez thoroughly, poncez légèrement</li>
+            <li>Appliquez sous-couche d'accrochage</li>
+            <li>Peignez 2 couches fines en croisant</li>
+            <li>Laissez durcir 72h avant remontage</li>
+          </ol>
+        </div>
+        <div class="safety">
+          <strong>⚠️ Sécurité:</strong> Aérez maximum. Portez masque organique. Ne cuisinez pas pendant 3 jours.
+        </div>
+      </article>
+
+    </div>
+  </section>
+
+  <!-- RANGEMENT -->
+  <section id="rangement" class="category-section">
+    <div class="section-header">
+      <h2>📦 Rangement & Organisation</h2>
+    </div>
+    <div class="project-grid">
+
+      <article class="project-card">
+        <div class="project-header">
+          <h3>7. Étagères flottantes en bois brut</h3>
+          <span class="difficulty diff-moyen">Moyen</span>
+        </div>
+        <div class="meta-info">
+          <span class="meta-item">⏱️ 3h</span>
+          <span class="budget">💰 45€</span>
+        </div>
+        <div class="materials">
+          <h4>Matériel:</h4>
+          <ul>
+            <li>Planche pin 120x20x2cm (15€)</li>
+            <li>Équerres invisibles x2 (12€)</li>
+            <li>Vis + chevilles (8€)</li>
+            <li>Teinte bois (10€)</li>
+          </ul>
+        </div>
+        <div class="steps">
+          <h4>Étapes:</h4>
+          <ol>
+            <li>Coupez planche à longueur souhaitée</li>
+            <li>Poncez, appliquez teinte ou vernis</li>
+            <li>Tracez niveau au mur, percez trous</li>
+            <li>Fixez équerres (niveau impératif !)</li>
+            <li>Glissez planche sur tiges équerres</li>
+          </ol>
+        </div>
+        <div class="safety">
+          <strong>⚠️ Sécurité:</strong> Utilisez détecteur métaux avant perçage. Vérifiez charge max (généralement 10kg).
+        </div>
+      </article>
+
+      <article class="project-card">
+        <div class="project-header">
+          <h3>8. Patères murales en branches</h3>
+          <span class="difficulty diff-facile">Facile</span>
+        </div>
+        <div class="meta-info">
+          <span class="meta-item">⏱️ 2h + séchage</span>
+          <span class="budget">💰 25€</span>
+        </div>
+        <div class="materials">
+          <h4>Matériel:</h4>
+          <ul>
+            <li>Branches bois dur (gratuit nature)</li>
+            <li>Planche bois 60x15cm (10€)</li>
+            <li>Vis à bois (5€)</li>
+            <li>Vernis (10€)</li>
+          </ul>
+        </div>
+        <div class="steps">
+          <h4>Étapes:</h4>
+          <ol>
+            <li>Ramassez branches Ø3-4cm, longueur 15cm</li>
+            <li>Écorcez, poncez, vernissez</li>
+            <li>Fixez planche au mur</li>
+            <li>Vissez branches en biais dans planche</li>
+            <li>Laissez sécher 24h avant usage</li>
+          </ol>
+        </div>
+        <div class="safety">
+          <strong>⚠️ Sécurité:</strong> Choisissez bois sec et dur (chêne, hêtre). Évitez bois résineux trop tendres.
+        </div>
+      </article>
+
+      <article class="project-card">
+        <div class="project-header">
+          <h3>9. Boîtes de rangement en carton décoré</h3>
+          <span class="difficulty diff-facile">Facile</span>
+        </div>
+        <div class="meta-info">
+          <span class="meta-item">⏱️ 1h30</span>
+          <span class="budget">💰 20€</span>
+        </div>
+        <div class="materials">
+          <h4>Matériel:</h4>
+          <ul>
+            <li>Boîtes chaussures (récupération)</li>
+            <li>Papier cadeau/contact (8€)</li>
+            <li>Colle blanche (5€)</li>
+            <li>Ruban adhésif toile (7€)</li>
+          </ul>
+        </div>
+        <div class="steps">
+          <h4>Étapes:</h4>
+          <ol>
+            <li>Mesurez boîtes, découpez papier aux dimensions</li>
+            <li>Collez papier extérieur en lissant bulles</li>
+            <li>Repliez surplus à l'intérieur</li>
+            <li>Renforcez angles avec ruban toile</li>
+            <li>Ajoutez étiquettes si besoin</li>
+          </ol>
+        </div>
+        <div class="safety">
+          <strong>⚠️ Sécurité:</strong> Attention cutter ! Utilisez règle métallique et tapis de découpe.
+        </div>
+      </article>
+
+      <article class="project-card">
+        <div class="project-header">
+          <h3>10. Porte-vêtements sous escalier</h3>
+          <span class="difficulty diff-moyen">Moyen</span>
+        </div>
+        <div class="meta-info">
+          <span class="meta-item">⏱️ 4h</span>
+          <span class="budget">💰 70€</span>
+        </div>
+        <div class="materials">
+          <h4>Matériel (Leroy Merlin):</h4>
+          <ul>
+            <li>Barre à vêtements télescopique (20€)</li>
+            <li>Supports muraux renforcés x2 (15€)</li>
+            <li>Étagères bois 80cm x2 (25€)</li>
+            <li>Vis + chevilles (10€)</li>
+          </ul>
+        </div>
+        <div class="steps">
+          <h4>Étapes:</h4>
+          <ol>
+            <li>Mesurez espace disponible</li>
+            <li>Fixez supports barre à bonne hauteur (1m60)</li>
+            <li>Installez barre, vérifiez horizontalité</li>
+            <li>Ajoutez étagères au-dessus pour chaussures</li>
+            <li>Testez charge progressive</li>
+          </ol>
+        </div>
+        <div class="safety">
+          <strong>⚠️ Sécurité:</strong> Charge max 20kg. Utilisez chevilles chimiques si mur creux.
+        </div>
+      </article>
+
+      <article class="project-card">
+        <div class="project-header">
+          <h3>11. Panneau perforé (pegboard) entrée</h3>
+          <span class="difficulty diff-facile">Facile</span>
+        </div>
+        <div class="meta-info">
+          <span class="meta-item">⏱️ 2h</span>
+          <span class="budget">💰 50€</span>
+        </div>
+        <div class="materials">
+          <h4>Matériel:</h4>
+          <ul>
+            <li>Panneau perforé 120x60cm (25€)</li>
+            <li>Crochets assortiment (15€)</li>
+            <li>Tasseaux bois 27x27 (6€)</li>
+            <li>Vis (4€)</li>
+          </ul>
+        </div>
+        <div class="steps">
+          <h4>Étapes:</h4>
+          <ol>
+            <li>Fixez tasseaux au mur (niveau)</li>
+            <li>Vissez panneau sur tasseaux</li>
+            <li>Peignez panneau si désiré</li>
+            <li>Installez crochets selon besoins</li>
+            <li>Organisez clés, sacs, écharpes</li>
+          </ol>
+        </div>
+        <div class="safety">
+          <strong>⚠️ Sécurité:</strong> Portez gants lors manipulation panneau (bords coupants).
+        </div>
+      </article>
+
+      <article class="project-card">
+        <div class="project-header">
+          <h3>12. Banc de rangement entrée</h3>
+          <span class="difficulty diff-moyen">Moyen</span>
+        </div>
+        <div class="meta-info">
+          <span class="meta-item">⏱️ 5h</span>
+          <span class="budget">💰 90€</span>
+        </div>
+        <div class="materials">
+          <h4>Matériel:</h4>
+          <ul>
+            <li>Planche pin 120x40x2cm (25€)</li>
+            <li>Caisses bois x3 (15€)</li>
+            <li>Coussin sur mesure (20€)</li>
+            <li>Vis, colle bois (15€)</li>
+            <li>Vernis (15€)</li>
+          </ul>
+        </div>
+        <div class="steps">
+          <h4>Étapes:</h4>
+          <ol>
+            <li>Assemblez caisses côte à côte, vissez</li>
+            <li>Fixez planche dessus comme assise</li>
+            <li>Poncez, vernissez l'ensemble</li>
+            <li>Ajoutez coussin (attaches velcro)</li>
+            <li>Rangez chaussures dans caisses</li>
+          </ol>
+        </div>
+        <div class="safety">
+          <strong>⚠️ Sécurité:</strong> Charge max 100kg. Vérifiez stabilité avant usage.
+        </div>
+      </article>
+
+    </div>
+  </section>
+
+  <!-- ÉCLAIRAGE -->
+  <section id="eclairage" class="category-section">
+    <div class="section-header">
+      <h2>💡 Éclairage & Ambiance</h2>
+    </div>
+    <div class="project-grid">
+
+      <article class="project-card">
+        <div class="project-header">
+          <h3>13. Suspension macramé</h3>
+          <span class="difficulty diff-moyen">Moyen</span>
+        </div>
+        <div class="meta-info">
+          <span class="meta-item">⏱️ 3h</span>
+          <span class="budget">💰 35€</span>
+        </div>
+        <div class="materials">
+          <h4>Matériel:</h4>
+          <ul>
+            <li>Corde coton 5mm x50m (15€)</li>
+            <li>Anneau bois Ø20cm (8€)</li>
+            <li>Douille E27 + câble (12€)</li>
+          </ul>
+        </div>
+        <div class="steps">
+          <h4>Étapes:</h4>
+          <ol>
+            <li>Coupez 24 fils de 3m</li>
+            <li>Pliez en 2, attachez à l'anneau (nœud tête d'alouette)</li>
+            <li>Faites nœuds carrés sur 40cm</li>
+            <li>Rassemblez tous fils, nouez en bas</li>
+            <li>Installez ampoule LED basse conso</li>
+          </ol>
+        </div>
+        <div class="safety">
+          <strong>⚠️ Sécurité:</strong> Coupez courant avant installation électrique. Utilisez ampoule LED max 40W.
+        </div>
+      </article>
+
+      <article class="project-card">
+        <div class="project-header">
+          <h3>14. Applique murale en pot Mason</h3>
+          <span class="difficulty diff-facile">Facile</span>
+        </div>
+        <div class="meta-info">
+          <span class="meta-item">⏱️ 1h30</span>
+          <span class="budget">💰 30€</span>
+        </div>
+        <div class="materials">
+          <h4>Matériel:</h4>
+          <ul>
+            <li>Pot Mason 500ml (5€)</li>
+            <li>Kit suspension pot (10€)</li>
+            <li>Guirlande LED pile (8€)</li>
+            <li>Peinture verre (7€)</li>
+          </ul>
+        </div>
+        <div class="steps">
+          <h4>Étapes:</h4>
+          <ol>
+            <li>Peignez extérieur pot (motifs au choix)</li>
+            <li>Laissez sécher 24h</li>
+            <li>Insérez guirlande dans pot</li>
+            <li>Fixez support au mur</li>
+            <li>Accrochez pot, allumez !</li>
+          </ol>
+        </div>
+        <div class="safety">
+          <strong>⚠️ Sécurité:</strong> Utilisez uniquement guirlandes LED (ne chauffent pas).
+        </div>
+      </article>
+
+      <article class="project-card">
+        <div class="project-header">
+          <h3>15. Ruban LED sous meubles cuisine</h3>
+          <span class="difficulty diff-facile">Facile</span>
+        </div>
+        <div class="meta-info">
+          <span class="meta-item">⏱️ 2h</span>
+          <span class="budget">💰 45€</span>
+        </div>
+        <div class="materials">
+          <h4>Matériel (Castorama):</h4>
+          <ul>
+            <li>Ruban LED 5m blanc chaud (25€)</li>
+            <li>Profilé alu + diffuseur (15€)</li>
+            <li>Transformateur 12V (déjà inclus)</li>
+          </ul>
+        </div>
+        <div class="steps">
+          <h4>Étapes:</h4>
+          <ol>
+            <li>Mesurez longueur sous placards</li>
+            <li>Découpez ruban aux points marqués</li>
+            <li>Collez profilé alu (adhésif ou vis)</li>
+            <li>Insérez ruban LED dans profilé</li>
+            <li>Branchez sur prise (interrupteur inclus)</li>
+          </ol>
+        </div>
+        <div class="safety">
+          <strong>⚠️ Sécurité:</strong> Vérifiez indice IP (minimum IP20 pour cuisine). Ne coupez pas n'importe où !
+        </div>
+      </article>
+
+      <article class="project-card">
+        <div class="project-header">
+          <h3>16. Lampe de chevet en livre creusé</h3>
+          <span class="difficulty diff-moyen">Moyen</span>
+        </div>
+        <div class="meta-info">
+          <span class="meta-item">⏱️ 4h + séchage</span>
+          <span class="budget">💰 40€</span>
+        </div>
+        <div class="materials">
+          <h4>Matériel:</h4>
+          <ul>
+            <li>Gros livre ancien (récup)</li>
+            <li>Kit lampe USB (20€)</li>
+            <li>Colle vinylique (8€)</li>
+            <li>Cutter + règle (déjà possédés)</li>
+          </ul>
+        </div>
+        <div class="steps">
+          <h4>Étapes:</h4>
+          <ol>
+            <li>Collez pages entre elles (sauf couverture)</li>
+            <li>Laissez sécher sous presse 24h</li>
+            <li>Dessinez rectangle au centre</li>
+            <li>Découpez pages au cutter (plusieurs passes)</li>
+            <li>Insérez LED, cachez câble dans pages</li>
+          </ol>
+        </div>
+        <div class="safety">
+          <strong>⚠️ Sécurité:</strong> Attention cutter ! Changez lame régulièrement. Utilisez LED froide.
+        </div>
+      </article>
+
+      <article class="project-card">
+        <div class="project-header">
+          <h3>17. Miroir lumineux style dressing</h3>
+          <span class="difficulty diff-moyen">Moyen</span>
+        </div>
+        <div class="meta-info">
+          <span class="meta-item">⏱️ 3h</span>
+          <span class="budget">💰 70€</span>
+        </div>
+        <div class="materials">
+          <h4>Matériel:</h4>
+          <ul>
+            <li>Miroir 60x80cm (35€)</li>
+            <li>Ruban LED blanc naturel 4m (20€)</li>
+            <li>Interrupteur tactile (10€)</li>
+            <li>Alimentation 12V (5€)</li>
+          </ul>
+        </div>
+        <div class="steps">
+          <h4>Étapes:</h4>
+          <ol>
+            <li>Collez ruban LED contour miroir (dos)</li>
+            <li>Reliez câbles, installez interrupteur</li>
+            <li>Fixez miroir au mur (chevilles adaptées)</li>
+            <li>Branchez, testez éclairage</li>
+            <li>Réglez luminosité si variateur</li>
+          </ol>
+        </div>
+        <div class="safety">
+          <strong>⚠️ Sécurité:</strong> Manipulez miroir avec gants (coupant). Fixation solide obligatoire.
+        </div>
+      </article>
+
+      <article class="project-card">
+        <div class="project-header">
+          <h3>18. Photophores en pots yaourt</h3>
+          <span class="difficulty diff-facile">Facile</span>
+        </div>
+        <div class="meta-info">
+          <span class="meta-item">⏱️ 1h</span>
+          <span class="budget">💰 15€</span>
+        </div>
+        <div class="materials">
+          <h4>Matériel:</h4>
+          <ul>
+            <li>Pots yaourt verre (récup)</li>
+            <li>Peinture verre transparente (8€)</li>
+            <li>Bougies chauffe-plat (5€)</li>
+            <li>Ficelle jute (2€)</li>
+          </ul>
+        </div>
+        <div class="steps">
+          <h4>Étapes:</h4>
+          <ol>
+            <li>Nettoyez pots, retirez étiquettes</li>
+            <li>Peignez motifs (points, rayures...)</li>
+            <li>Laissez sécher 2h</li>
+            <li>Nouez ficelle autour col</li>
+            <li>Placez bougie, allumez</li>
+          </ol>
+        </div>
+        <div class="safety">
+          <strong>⚠️ Sécurité:</strong> Ne laissez jamais bougies sans surveillance. Éloignez matériaux inflammables.
+        </div>
+      </article>
+
+    </div>
+  </section>
+
+  <!-- CUISINE -->
+  <section id="cuisine" class="category-section">
+    <div class="section-header">
+      <h2>🍳 Cuisine & Art de la Table</h2>
+    </div>
+    <div class="project-grid">
+
+      <article class="project-card">
+        <div class="project-header">
+          <h3>19. Planche à découper personnalisée</h3>
+          <span class="difficulty diff-facile">Facile</span>
+        </div>
+        <div class="meta-info">
+          <span class="meta-item">⏱️ 2h + séchage</span>
+          <span class="budget">💰 35€</span>
+        </div>
+        <div class="materials">
+          <h4>Matériel:</h4>
+          <ul>
+            <li>Planche bambou 40x30cm (15€)</li>
+            <li>Pyrograveur (15€)</li>
+            <li>Huile alimentaire lin (5€)</li>
+          </ul>
+        </div>
+        <div class="steps">
+          <h4>Étapes:</h4>
+          <ol>
+            <li>Dessinez motif au crayon</li>
+            <li>Pyrogravez lentement (testez avant)</li>
+            <li>Laissez refroidir</li>
+            <li>Appliquez huile de lin (2 couches)</li>
+            <li>Laissez polymériser 48h</li>
+          </ol>
+        </div>
+        <div class="safety">
+          <strong>⚠️ Sécurité:</strong> Pyrograveur très chaud ! Travaillez dans pièce ventilée (fumées).
+        </div>
+      </article>
+
+      <article class="project-card">
+        <div class="project-header">
+          <h3>20. Dosseret cuisine en adhésif</h3>
+          <span class="difficulty diff-facile">Facile</span>
+        </div>
+        <div class="meta-info">
+          <span class="meta-item">⏱️ 2h</span>
+          <span class="budget">💰 50€</span>
+        </div>
+        <div class="materials">
+          <h4>Matériel (Leroy Merlin):</h4>
+          <ul>
+            <li>Adhésif spécial cuisine 45cm x10m (25€)</li>
+            <li>Raclette feutre (5€)</li>
+            <li>Cutter + règle (déjà possédés)</li>
+            <li>Dégraissant (5€)</li>
+          </ul>
+        </div>
+        <div class="steps">
+          <h4>Étapes:</h4>
+          <ol>
+            <li>Dégraissez mur thoroughly</li>
+            <li>Mesurez, découpez lé (laissez marge)</li>
+            <li>Décollez backing, appliquez haut vers bas</li>
+            <li>Raclez bulles vers l'extérieur</li>
+            <li>Découpez contours prises/robinet</li>
+          </ol>
+        </div>
+        <div class="safety">
+          <strong>⚠️ Sécurité:</strong> Choisissez adhésif ignifugé près plaques de cuisson.
+        </div>
+      </article>
+
+      <article class="project-card">
+        <div class="project-header">
+          <h3>21. Étagère épices aimantée</h3>
+          <span class="difficulty diff-facile">Facile</span>
+        </div>
+        <div class="meta-info">
+          <span class="meta-item">⏱️ 1h30</span>
+          <span class="budget">💰 40€</span>
+        </div>
+        <div class="materials">
+          <h4>Matériel:</h4>
+          <ul>
+            <li>Barre aimantée 50cm (20€)</li>
+            <li>Pots épices métal x6 (15€)</li>
+            <li>Étiquettes (5€)</li>
+          </ul>
+        </div>
+        <div class="steps">
+          <h4>Étapes:</h4>
+          <ol>
+            <li>Fixez barre aimantée au mur (niveau)</li>
+            <li>Remplissez pots épices</li>
+            <li>Étiquetez chaque pot</li>
+            <li>Collez pots sur barre</li>
+            <li>À portée de main près plan de travail !</li>
+          </ol>
+        </div>
+        <div class="safety">
+          <strong>⚠️ Sécurité:</strong> Vérifiez charge max barre (généralement 5kg).
+        </div>
+      </article>
+
+      <article class="project-card">
+        <div class="project-header">
+          <h3>22. Tablette rabattable gain de place</h3>
+          <span class="difficulty diff-avance">Avancé</span>
+        </div>
+        <div class="meta-info">
+          <span class="meta-item">⏱️ 5h</span>
+          <span class="budget">💰 80€</span>
+        </div>
+        <div class="materials">
+          <h4>Matériel:</h4>
+          <ul>
+            <li>Plan mélaminé 80x40cm (25€)</li>
+            <li>Charnières rabattables x2 (30€)</li>
+            <li>Équerres support (15€)</li>
+            <li>Vis + chevilles (10€)</li>
+          </ul>
+        </div>
+        <div class="steps">
+          <h4>Étapes:</h4>
+          <ol>
+            <li>Fixez charnières au mur (niveau parfait)</li>
+            <li>Vissez tablette sur charnières</li>
+            <li>Installez équerres support dessous</li>
+            <li>Testez ouverture/fermeture</li>
+            <li>Ajustez si nécessaire</li>
+          </ol>
+        </div>
+        <div class="safety">
+          <strong>⚠️ Sécurité:</strong> Charge max 15kg. Vérifiez solidité fixation mur (chevilles adaptées).
+        </div>
+      </article>
+
+      <article class="project-card">
+        <div class="project-header">
+          <h3>23. Porte-revues en tubes carton</h3>
+          <span class="difficulty diff-facile">Facile</span>
+        </div>
+        <div class="meta-info">
+          <span class="meta-item">⏱️ 2h</span>
+          <span class="budget">💰 20€</span>
+        </div>
+        <div class="materials">
+          <h4>Matériel:</h4>
+          <ul>
+            <li>Tubes carton (récupération)</li>
+            <li>Papier contact (10€)</li>
+            <li>Planche bois base (8€)</li>
+            <li>Colle forte (2€)</li>
+          </ul>
+        </div>
+        <div class="steps">
+          <h4>Étapes:</h4>
+          <ol>
+            <li>Coupez tubes hauteurs différentes</li>
+            <li>Recouvrez papier contact</li>
+            <li>Collez tubes sur base bois</li>
+            <li>Laissez sécher 24h</li>
+            <li>Glissez revues, catalogues...</li>
+          </ol>
+        </div>
+        <div class="safety">
+          <strong>⚠️ Sécurité:</strong> Utilisez colle non toxique. Laissez sécher dans pièce aérée.
+        </div>
+      </article>
+
+      <article class="project-card">
+        <div class="project-header">
+          <h3>24. Herbier aromatiques suspendu</h3>
+          <span class="difficulty diff-facile">Facile</span>
+        </div>
+        <div class="meta-info">
+          <span class="meta-item">⏱️ 1h30</span>
+          <span class="budget">💰 45€</span>
+        </div>
+        <div class="materials">
+          <h4>Matériel:</h4>
+          <ul>
+            <li>Planches bois 60x15cm x2 (15€)</li>
+            <li>Cordes chanvre 4m (8€)</li>
+            <li>Pots terre cuite x4 (15€)</li>
+            <li>Crochets plafond (7€)</li>
+          </ul>
+        </div>
+        <div class="steps">
+          <h4>Étapes:</h4>
+          <ol>
+            <li>Percez 4 trous coins planches</li>
+            <li>Passez cordes, nouez sous planche basse</li>
+            <li>Suspendez au plafond (crochets solides)</li>
+            <li>Placez pots sur planche haute</li>
+            <li>Plantez basilic, menthe, persil...</li>
+          </ol>
+        </div>
+        <div class="safety">
+          <strong>⚠️ Sécurité:</strong> Vérifiez solidité plafond. Arrosez avec soucoupe pour éviter gouttes.
+        </div>
+      </article>
+
+    </div>
+  </section>
+
+  <!-- SALLE DE BAIN -->
+  <section id="sdb" class="category-section">
+    <div class="section-header">
+      <h2>🛁 Salle de Bain</h2>
+    </div>
+    <div class="project-grid">
+
+      <article class="project-card">
+        <div class="project-header">
+          <h3>25. Rideau douche personnalisé</h3>
+          <span class="difficulty diff-facile">Facile</span>
+        </div>
+        <div class="meta-info">
+          <span class="meta-item">⏱️ 2h</span>
+          <span class="budget">💰 35€</span>
+        </div>
+        <div class="materials">
+          <h4>Matériel:</h4>
+          <ul>
+            <li>Rideau douche blanc uni (12€)</li>
+            <li>Peinture textile (15€)</li>
+            <li>Pochoirs (8€)</li>
+          </ul>
+        </div>
+        <div class="steps">
+          <h4>Étapes:</h4>
+          <ol>
+            <li>Étendez rideau sur surface plane</li>
+            <li>Placez pochoirs, épinglez</li>
+            <li>Tamponnez peinture (peu de produit)</li>
+            <li>Laissez sécher 24h</li>
+            <li>Fixez peinture fer à repasser (dos tissu)</li>
+          </ol>
+        </div>
+        <div class="safety">
+          <strong>⚠️ Sécurité:</strong> Utilisez peinture spéciale textile lavable. Aérez bien.
+        </div>
+      </article>
+
+      <article class="project-card">
+        <div class="project-header">
+          <h3>26. Étagère douche en teck</h3>
+          <span class="difficulty diff-moyen">Moyen</span>
+        </div>
+        <div class="meta-info">
+          <span class="meta-item">⏱️ 3h</span>
+          <span class="budget">💰 60€</span>
+        </div>
+        <div class="materials">
+          <h4>Matériel:</h4>
+          <ul>
+            <li>Planche teck 60x20cm (35€)</li>
+            <li>Cordes nylon imputrescibles (12€)</li>
+            <li>Crochets inox (8€)</li>
+            <li>Huile teck (5€)</li>
+          </ul>
+        </div>
+        <div class="steps">
+          <h4>Étapes:</h4>
+          <ol>
+            <li>Poncez légèrement teck</li>
+            <li>Appliquez huile, laissez pénétrer</li>
+            <li>Percez 4 trous coins</li>
+            <li>Passez cordes, ajustez hauteurs</li>
+            <li>Suspendez dans douche</li>
+          </ol>
+        </div>
+        <div class="safety">
+          <strong>⚠️ Sécurité:</strong> Vérifiez que crochets supportent poids + eau. Teck imputrescible idéal.
+        </div>
+      </article>
+
+      <article class="project-card">
+        <div class="project-header">
+          <h3>27. Tapis de bain en bouchons liège</h3>
+          <span class="difficulty diff-moyen">Moyen</span>
+        </div>
+        <div class="meta-info">
+          <span class="meta-item">⏱️ 4h</span>
+          <span class="budget">💰 25€</span>
+        </div>
+        <div class="materials">
+          <h4>Matériel:</h4>
+          <ul>
+            <li>Bouchons liège x100 (gratuit)</li>
+            <li>Filet pêche ou grillage (10€)</li>
+            <li>Ficelle résistante (5€)</li>
+            <li>Antidérapant (10€)</li>
+          </ul>
+        </div>
+        <div class="steps">
+          <h4>Étapes:</h4>
+          <ol>
+            <li>Coupez bouchons en rondelles 1cm</li>
+            <li>Enfilez sur ficelle (longueur tapis)</li>
+            <li>Cousez rangées sur filet</li>
+            <li>Collez antidérapant dessous</li>
+            <li>Laissez sécher 24h</li>
+          </ol>
+        </div>
+        <div class="safety">
+          <strong>⚠️ Sécurité:</strong> Vérifiez antidérapant efficace. Liège naturellement imputrescible.
+        </div>
+      </article>
+
+      <article class="project-card">
+        <div class="project-header">
+          <h3>28. Porte-serviettes échelle</h3>
+          <span class="difficulty diff-facile">Facile</span>
+        </div>
+        <div class="meta-info">
+          <span class="meta-item">⏱️ 2h30</span>
+          <span class="budget">💰 40€</span>
+        </div>
+        <div class="materials">
+          <h4>Matériel:</h4>
+          <ul>
+            <li>Tuteurs bambou Ø3cm x180cm x2 (12€)</li>
+            <li>Branches Ø2cm x40cm x4 (8€)</li>
+            <li>Vis bois (5€)</li>
+            <li>Vernis marin (15€)</li>
+          </ul>
+        </div>
+        <div class="steps">
+          <h4>Étapes:</h4>
+          <ol>
+            <li>Poncez bambou, vernissez</li>
+            <li>Percez montants tous 30cm</li>
+            <li>Insérez barreaux, vissez</li>
+            <li>Laissez reposer contre mur</li>
+            <li>Disposez serviettes</li>
+          </ol>
+        </div>
+        <div class="safety">
+          <strong>⚠️ Sécurité:</strong> Vernis marin résistant humidité. Stabilisez base si nécessaire.
+        </div>
+      </article>
+
+      <article class="project-card">
+        <div class="project-header">
+          <h3>29. Distributeur savon en verre</h3>
+          <span class="difficulty diff-facile">Facile</span>
+        </div>
+        <div class="meta-info">
+          <span class="meta-item">⏱️ 30min</span>
+          <span class="budget">💰 18€</span>
+        </div>
+        <div class="materials">
+          <h4>Matériel:</h4>
+          <ul>
+            <li>Bocal verre 500ml (5€)</li>
+            <li>Pompe savon inox (10€)</li>
+            <li>Peinture verre (3€)</li>
+          </ul>
+        </div>
+        <div class="steps">
+          <h4>Étapes:</h4>
+          <ol>
+            <li>Nettoyez bocal thoroughly</li>
+            <li>Peignez motifs si désiré</li>
+            <li>Percez couvercle (diamètre pompe)</li>
+            <li>Insérez pompe</li>
+            <li>Remplissez savon liquide</li>
+          </ol>
+        </div>
+        <div class="safety">
+          <strong>⚠️ Sécurité:</strong> Percez verre avec foret diamant, eau froide, vitesse lente.
+        </div>
+      </article>
+
+      <article class="project-card">
+        <div class="project-header">
+          <h3>30. Carrelage adhésif sol</h3>
+          <span class="difficulty diff-moyen">Moyen</span>
+        </div>
+        <div class="meta-info">
+          <span class="meta-item">⏱️ 4h</span>
+          <span class="budget">💰 90€</span>
+        </div>
+        <div class="materials">
+          <h4>Matériel (Castorama):</h4>
+          <ul>
+            <li>Dalles PVC clipsables 30x30 (60€/m²)</li>
+            <li>Cutter pro (10€)</li>
+            <li>Règle métal (déjà possédée)</li>
+            <li>Primaire d'accrochage (20€)</li>
+          </ul>
+        </div>
+        <div class="steps">
+          <h4>Étapes:</h4>
+          <ol>
+            <li>Nettoyez sol, appliquez primaire</li>
+            <li>Commencez centre pièce</li>
+            <li>Emboîtez dalles (système clips)</li>
+            <li>Découpez contours au cutter</li>
+            <li>Roulez pour bien coller</li>
+          </ol>
+        </div>
+        <div class="safety">
+          <strong>⚠️ Sécurité:</strong> Choisissez dalles antidérapantes classe R10 minimum.
+        </div>
+      </article>
+
+    </div>
+  </section>
+
+  <!-- JARDIN & BALCON -->
+  <section id="jardin" class="category-section">
+    <div class="section-header">
+      <h2>🌱 Jardin & Balcon</h2>
+    </div>
+    <div class="project-grid">
+
+      <article class="project-card">
+        <div class="project-header">
+          <h3>31. Potager vertical palettes</h3>
+          <span class="difficulty diff-moyen">Moyen</span>
+        </div>
+        <div class="meta-info">
+          <span class="meta-item">⏱️ 4h</span>
+          <span class="budget">💰 50€</span>
+        </div>
+        <div class="materials">
+          <h4>Matériel:</h4>
+          <ul>
+            <li>Palette Europe HT (gratuit)</li>
+            <li>Feutre géotextile 5m² (15€)</li>
+            <li>Terreau 50L (12€)</li>
+            <li>Agrafeuse murale (8€)</li>
+            <li>Plants aromatiques (15€)</li>
+          </ul>
+        </div>
+        <div class="steps">
+          <h4>Étapes:</h4>
+          <ol>
+            <li>Poncez palette, vérifiez traitement HT</li>
+            <li>Agrafez feutre fond et côtés</li>
+            <li>Remplissez terreau</li>
+            <li>Plantez par les ouvertures</li>
+            <li>Accrochez au mur (soleil)</li>
+          </ol>
+        </div>
+        <div class="safety">
+          <strong>⚠️ Sécurité:</strong> Palette HT uniquement (non traitée chimiquement). Charge max 30kg.
+        </div>
+      </article>
+
+      <article class="project-card">
+        <div class="project-header">
+          <h3>32. Arrosoir en bouteille plastique</h3>
+          <span class="difficulty diff-facile">Facile</span>
+        </div>
+        <div class="meta-info">
+          <span class="meta-item">⏱️ 20min</span>
+          <span class="budget">💰 0€</span>
+        </div>
+        <div class="materials">
+          <h4>Matériel:</h4>
+          <ul>
+            <li>Bouteille 2L (récup)</li>
+            <li>Clou + marteau (déjà possédés)</li>
+            <li>Peinture spray (optionnel)</li>
+          </ul>
+        </div>
+        <div class="steps">
+          <h4>Étapes:</h4>
+          <ol>
+            <li>Lavez bouteille, retirez étiquette</li>
+            <li>Percez bouchon plusieurs trous</li>
+            <li>Découpez fond bouteille (anse)</li>
+            <li>Peignez si désiré</li>
+            <li>Remplissez, arrosez !</li>
+          </ol>
+        </div>
+        <div class="safety">
+          <strong>⚠️ Sécurité:</strong> Chauffez clou pour perçage plus facile (adulte uniquement).
+        </div>
+      </article>
+
+      <article class="project-card">
+        <div class="project-header">
+          <h3>33. Table de jardin en bobine câble</h3>
+          <span class="difficulty diff-facile">Facile</span>
+        </div>
+        <div class="meta-info">
+          <span class="meta-item">⏱️ 3h</span>
+          <span class="budget">💰 45€</span>
+        </div>
+        <div class="materials">
+          <h4>Matériel:</h4>
+          <ul>
+            <li>Bobine câble bois (gratuit/15€)</li>
+            <li>Papier de verre (8€)</li>
+            <li>Vernis extérieur (20€)</li>
+            <li>Roulettes option (15€)</li>
+          </ul>
+        </div>
+        <div class="steps">
+          <h4>Étapes:</h4>
+          <ol>
+            <li>Poncez thoroughly (intérieur/extérieur)</li>
+            <li>Dépoussiérez</li>
+            <li>Appliquez 3 couches vernis extérieur</li>
+            <li>Ajoutez roulettes si mobile</li>
+            <li>Disposez sur terrasse</li>
+          </ol>
+        </div>
+        <div class="safety">
+          <strong>⚠️ Sécurité:</strong> Vernis extérieur UV + humidité. Poids 20kg, manipulez à deux.
+        </div>
+      </article>
+
+      <article class="project-card">
+        <div class="project-header">
+          <h3>34. Hôtel à insectes</h3>
+          <span class="difficulty diff-moyen">Moyen</span>
+        </div>
+        <div class="meta-info">
+          <span class="meta-item">⏱️ 3h</span>
+          <span class="budget">💰 30€</span>
+        </div>
+        <div class="materials">
+          <h4>Matériel:</h4>
+          <ul>
+            <li>Caisse bois 40x30x15cm (15€)</li>
+            <li>Bambous sections (8€)</li>
+            <li>Pommes de pin (gratuit)</li>
+            <li>Briques trous (5€)</li>
+            <li>Grillage fond (2€)</li>
+          </ul>
+        </div>
+        <div class="steps">
+          <h4>Étapes:</h4>
+          <ol>
+            <li>Clouez grille fond caisse</li>
+            <li>Remplissez compartiments matériaux</li>
+            <li>Bambous coupés 15cm (abeilles)</li>
+            <li>Pommes pin (perce-oreilles)</li>
+            <li>Accrochez mur sud (abri pluie)</li>
+          </ol>
+        </div>
+        <div class="safety">
+          <strong>⚠️ Sécurité:</strong> Portez gants manipulation bois. Orientez sud-est idéal.
+        </div>
+      </article>
+
+      <article class="project-card">
+        <div class="project-header">
+          <h3>35. Suspension plantes macramé</h3>
+          <span class="difficulty diff-moyen">Moyen</span>
+        </div>
+        <div class="meta-info">
+          <span class="meta-item">⏱️ 2h</span>
+          <span class="budget">💰 25€</span>
+        </div>
+        <div class="materials">
+          <h4>Matériel:</h4>
+          <ul>
+            <li>Corde coton 4mm x30m (12€)</li>
+            <li>Anneau métal (5€)</li>
+            <li>Pot terre cuite (8€)</li>
+          </ul>
+        </div>
+        <div class="steps">
+          <h4>Étapes:</h4>
+          <ol>
+            <li>Coupez 8 fils de 4m</li>
+            <li>Attachez à anneau (tête d'alouette)</li>
+            <li>Faites nœuds carrés 30cm</li>
+            <li>Rassemblez, nouez sous pot</li>
+            <li>Accrochez balcon/terrasse</li>
+          </ol>
+        </div>
+        <div class="safety">
+          <strong>⚠️ Sécurité:</strong> Crochet plafond supporte 10kg minimum. Arrosez avec soucoupe.
+        </div>
+      </article>
+
+      <article class="project-card">
+        <div class="project-header">
+          <h3>36. Composteur en palettes</h3>
+          <span class="difficulty diff-moyen">Moyen</span>
+        </div>
+        <div class="meta-info">
+          <span class="meta-item">⏱️ 4h</span>
+          <span class="budget">💰 40€</span>
+        </div>
+        <div class="materials">
+          <h4>Matériel:</h4>
+          <ul>
+            <li>Palettes x4 (gratuit)</li>
+            <li>Charnières x4 (15€)</li>
+            <li>Grillage mailles fines 2m² (10€)</li>
+            <li>Vis bois (8€)</li>
+            <li>Fond grillagé (7€)</li>
+          </ul>
+        </div>
+        <div class="steps">
+          <h4>Étapes:</h4>
+          <ol>
+            <li>Dressez 3 palettes en U</li>
+            <li>Vissez ensemble solidement</li>
+            <li>Attachez 4ème palette devant (charnières)</li>
+            <li>Clouez grillage fond</li>
+            <li>Placez jardin (ombre)</li>
+          </ol>
+        </div>
+        <div class="safety">
+          <strong>⚠️ Sécurité:</strong> Portez gants manipulation palettes. Ne compostez pas viande/lait.
+        </div>
+      </article>
+
+    </div>
+  </section>
+
+  <!-- OUTILLAGE DÉBUTANTS -->
+  <section id="outils" class="category-section">
+    <div class="section-header">
+      <h2> Guide Outillage Débutant</h2>
+    </div>
+    <p style="text-align: center; margin-bottom: 2rem; font-size: 1.1rem;">Les essentiels pour bien commencer sans se ruiner</p>
+    
+    <div class="tool-grid">
+      <div class="tool-card">
+        <h4>📏 Mètre ruban 5m</h4>
+        <p>Indispensable pour toutes mesures. Choisissez blocage automatique.</p>
+        <p class="price-range">8-12€ (Leroy Merlin)</p>
+      </div>
+      
+      <div class="tool-card">
+        <h4>🔨 Marteau 300g</h4>
+        <p>Poids idéal débutant. Manche fibre de verre anti-vibrations.</p>
+        <p class="price-range">10-15€</p>
+      </div>
+      
+      <div class="tool-card">
+        <h4>🪛 Tournevis 6 en 1</h4>
+        <p>Embouts plats/cruciformes interchangeables. Gain de place.</p>
+        <p class="price-range">12-18€ (Castorama)</p>
+      </div>
+      
+      <div class="tool-card">
+        <h4>🔧 Niveau à bulle 60cm</h4>
+        <p>Essentiel pour étagères, tableaux. 3 bulles (horizontal/vertical/45°).</p>
+        <p class="price-range">15-25€</p>
+      </div>
+      
+      <div class="tool-card">
+        <h4>🪚 Scie égoïne</h4>
+        <p>Pour coupes bois droites. Dents 11-13 TPI polyvalent.</p>
+        <p class="price-range">15-20€</p>
+      </div>
+      
+      <div class="tool-card">
+        <h4>🔌 Perceuse-visseuse sans fil</h4>
+        <p>12V suffit débutant. 2 batteries, coffret inclus.</p>
+        <p class="price-range">50-80€ (Black&Decker)</p>
+      </div>
+      
+      <div class="tool-card">
+        <h4>✂️ Cutter rétractable</h4>
+        <p>Lame rétractable sécurité. Rechange lames inclus.</p>
+        <p class="price-range">5-8€</p>
+      </div>
+      
+      <div class="tool-card">
+        <h4>📐 Équerre de menuisier</h4>
+        <p>Vérifie angles droits avant perçage/visage. Acier inox.</p>
+        <p class="price-range">8-12€</p>
+      </div>
+      
+      <div class="tool-card">
+        <h4>🔩 Jeu de forets</h4>
+        <p>Bois/métal/plastique Ø3-10mm. Coffret 10 pièces.</p>
+        <p class="price-range">15-25€</p>
+      </div>
+      
+      <div class="tool-card">
+        <h4>🧰 Caisse à outils</h4>
+        <p>Rangement compartiments. Poignée ergonomique.</p>
+        <p class="price-range">20-35€</p>
+      </div>
+      
+      <div class="tool-card">
+        <h4>👓 Équipements sécurité</h4>
+        <p>Lunettes protection + gants + masque poussière.</p>
+        <p class="price-range">15-25€</p>
+      </div>
+      
+      <div class="tool-card">
+        <h4>🔦 Lampe torche LED</h4>
+        <p>Éclairage zones sombres. Recharge USB.</p>
+        <p class="price-range">10-15€</p>
+      </div>
+    </div>
+
+    <div style="background: var(--accent); padding: 2rem; border-radius: var(--radius); margin-top: 2rem;">
+      <h3 style="color: var(--secondary); margin-bottom: 1rem; text-align: center;">💡 Conseils Achat</h3>
+      <ul style="list-style: none; max-width: 800px; margin: 0 auto; line-height: 2;">
+        <li>✓ Privilégiez qualité sur quantité pour outils fréquents</li>
+        <li>✓ Marques recommandées : Stanley, Bosch Green, Facom</li>
+        <li>✓ Profitez promos Leroy Merlin/Castorama (fins série)</li>
+        <li>✓ Garantie décennale sur outillage électroportatif</li>
+        <li>✓ Louez outils coûteux (perforateur, ponceuse) pour usage unique</li>
+      </ul>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <p class="disclaimer">
+      <strong>⚠️ Avertissement important :</strong> Ces tutoriels sont fournis à titre indicatif. Brico Malin France décline toute responsabilité en cas d'accident ou de dommage. 
+      Portez toujours équipements de sécurité adaptés. Pour travaux électriques/plomberie complexes, faites appel à un professionnel certifié. 
+      Respectez normes NF et DTU en vigueur.
+    </p>
+    <p style="margin: 1rem 0; font-size: 1rem;">📍 23 Rue de la République, 13001 Marseille, France</p>
+    <p class="copyright">© 2026 Brico Malin France. Tous droits réservés. | Fait avec 🔨 et passion</p>
+  </div>
+</footer>
+
+</body>
+</html>
